@@ -1,4 +1,4 @@
-const subtitle = `1
+1
 00:07:10,935 --> 00:07:14,104
 A morte pálida
 com medo agudo
@@ -3760,29 +3760,4 @@ a alma suplicante.
 840
 01:46:17,310 --> 01:46:20,638
 Siga-nos no Twitter:
-@subsfiction`;
-
-import SRTool from "./share/SRTool";
-
-const IndexController = function IndexController() {
-    const vc = this;
-    vc.time = {
-        hour: "00",
-        minute: "00",
-        second: "10",
-        millisecond: "999"
-    };
-    vc.content = subtitle;
-
-    vc.evaluateSRTool = function(){
-        const srtool = new SRTool(vc.content);
-        vc.parsedContent = srtool.plus(`${vc.time.hour}:${vc.time.minute}:${vc.time.second},${vc.time.millisecond}`);
-    };
-
-    vc.evaluateSRTool();
-
-
-};
-
-IndexController.$inject = [];
-export default IndexController;
+@subsfiction
