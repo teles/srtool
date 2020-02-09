@@ -13,7 +13,7 @@ const SRTool = function SRTool(content) {
             return _lineToText({
                 index: line.index,
                 begin: templateMeterInstance.plus(line.begin, value),
-                end: templateMeterInstance.plus(line.begin, value),
+                end: templateMeterInstance.plus(line.end, value),
                 text: line.text
             });
         }).join("\n\n");

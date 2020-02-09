@@ -3777,6 +3777,7 @@ const IndexController = function IndexController() {
     vc.evaluateSRTool = function(){
         const srtool = new SRTool(vc.content);
         vc.parsedContent = srtool.plus(`${vc.time.hour}:${vc.time.minute}:${vc.time.second},${vc.time.millisecond}`);
+        console.log(`${vc.time.hour}:${vc.time.minute}:${vc.time.second},${vc.time.millisecond}`); // eslint-disable-line
     };
 
     vc.evaluateSRTool();
