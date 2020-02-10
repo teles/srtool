@@ -23,10 +23,29 @@
 </section>
 <div class="section">
     <div class="columns">
-        <div class="column"><input class="input" data-ng-change="vc.evaluateSRTool()" data-ng-model="vc.time.hour" placeholder="00"></div>
-        <div class="column"><input class="input" data-ng-change="vc.evaluateSRTool()" data-ng-model="vc.time.minute" placeholder="00"></div>
-        <div class="column"><input class="input" data-ng-change="vc.evaluateSRTool()" data-ng-model="vc.time.second" placeholder="00"></div>
-        <div class="column"><input class="input" data-ng-change="vc.evaluateSRTool()" data-ng-model="vc.time.millisecond" placeholder="00"></div>
+        <div class="column">
+            <input
+                maxlength="2" class="input"
+                data-ng-change="vc.evaluateSRTool()"
+                data-ng-model="vc.time.hour" placeholder="00">
+        </div>
+        <div class="column">
+            <input maxlength="2" class="input"
+                   data-ng-change="vc.evaluateSRTool()"
+                   data-ng-model="vc.time.minute"
+                   placeholder="59">
+        </div>
+        <div class="column">
+            <input maxlength="2" class="input"
+                   data-ng-change="vc.evaluateSRTool()"
+                   data-ng-model="vc.time.second"
+                   placeholder="59">
+        </div>
+        <div class="column">
+            <input maxlength="3" class="input"
+                   data-ng-change="vc.evaluateSRTool()"
+                   data-ng-model="vc.time.millisecond" placeholder="999">
+        </div>
     </div>
     <div class="columns">
         <div class="column">
@@ -34,6 +53,9 @@
         </div>
         <div class="column">
             <textarea disabled class="textarea" data-ng-model="vc.parsedContent"></textarea>
+            <div style="margin-top:10px;">
+                <button class="button is-primary" data-ng-click="vc.download()" style="width: 100%;">Baixar legenda</button>
+            </div>
         </div>
     </div>
 </div>

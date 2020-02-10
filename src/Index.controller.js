@@ -3782,6 +3782,16 @@ const IndexController = function IndexController() {
 
     vc.evaluateSRTool();
 
+    vc.download = function download() {
+        var element = document.createElement("a");
+        element.setAttribute("href", "data:text/plain;charset=utf-8," + encodeURIComponent(vc.parsedContent));
+        element.setAttribute("download", `sub-plus-${vc.time.hour}:${vc.time.minute}:${vc.time.second},${vc.time.millisecond}.srt`);
+        element.style.display = "none";
+        document.body.appendChild(element);
+        element.click();
+        document.body.removeChild(element);
+    };
+
 
 };
 
