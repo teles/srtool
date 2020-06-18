@@ -43,7 +43,7 @@
     "webpack-merge": "4.1.0"
   },
   "dependencies": {
-    "angular": "1.5.6",
+    "angular": "1.8.0",
     "html-loader": "^0.5.5",
     "ramda": "0.26.1",
     "tabletop": "1.5.2"
